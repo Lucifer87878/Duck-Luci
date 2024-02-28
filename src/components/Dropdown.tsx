@@ -8,6 +8,7 @@ interface DropdownProps {
 const Dropdown: React.FC<DropdownProps> = ({ options, onChange }) => {
   return (
     <select onChange={(e) => onChange(Number(e.target.value))}>
+      <option value="">---Choose---</option>
       {options.map((option) => (
         <option key={option.value} value={option.value}>
           {option.label}
